@@ -13,12 +13,12 @@ namespace Tyuiu.TarasovVD.Sprint2.Task1.V22.Lib
         {
             bool[] res = new bool[6]; //a = 324, b = 696, c = 254, d = 155
 
-            res[0] = a < b && b > c;
-            res[1] = a > c || c < d;
-            res[2] = a >= c && b <= d;
-            res[3] = a < c || d > b;
-            res[4] = !(a == b) && (d != c);
-            res[5] = !(a < c) || (c < d);
+            res[0] = (a < b) | (c < d);
+            res[1] = (a < b) & (c > d);
+            res[2] = (a < b) || (c < d);
+            res[3] = (a > b) && (c < d);
+            res[4] = !(a < b);
+            res[5] = (a < b) ^ (c > d);
             return res;
         }
     }
